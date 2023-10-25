@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Masro är en AI-driven matprenumeration som kommer att få dig att äta hälsosamt igen, 365 dagar per år. Den är skräddarsydd efter din personliga smak och näringsbehov."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Masro &mdash; Din hälsosamma mat</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="name">Masro</h1>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#how">Hur det fungerar</a></li>
+          <li><a class="main-nav-link" href="#meals"> Måltider</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Rekommendationer</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Prissättning</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Prova gratis</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              Hälsosam mat levererad till din dörr, varje dag.
+            </h1>
+            <p class="hero-description">
+              Skräddarsydd efter din personliga smak och näringsbehov.
+            </p>
+            <a href="#cta" class="btn btn--full margin-right-sm"
+              >Börja äta bra</a
+            >
+
+            <a href="#how" class="btn btn--outline">Läs mer &darr;</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img src="img/customers/customer-1.jpg" alt="customer photo" />
+                <img src="img/customers/customer-2.jpg" alt="customer photo" />
+                <img src="img/customers/customer-3.jpg" alt="customer photo" />
+                <img src="img/customers/customer-4.jpg" alt="customer photo" />
+                <img src="img/customers/customer-5.jpg" alt="customer photo" />
+                <img src="img/customers/customer-6.jpg" alt="customer photo" />
+              </div>
+              <p class="delivered-text">
+                <span>120,000+</span> måltider levererade förra året!
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">Som visas i</h2>
+          <div class="logos">
+            <img src="img/logos/techcrunch.png" alt="Techcrunch logo" />
+            <img
+              src="img/logos/business-insider.png"
+              alt="Business Insider logo"
+            />
+            <img
+              src="img/logos/the-new-york-times.png"
+              alt="The New York Times logo"
+            />
+            <img src="img/logos/forbes.png" alt="Forbes logo" />
+            <img src="img/logos/usa-today.png" alt="USA Today logo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-how" id="how">
+        <div class="container">
+          <span class="subheading">Hur det fungerar</span>
+          <h2 class="heading-secondary">
+            Din dagliga dos av hälsa i 3 enkla steg.
+          </h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- step 01 -->
+          <div class="step-text-box">
+            <p class="step-number">01</p>
+            <h3 class="heading-tertiary">Berätta vad du gillar (eller inte)</h3>
+            <p class="step-description">
+              Slösa aldrig mer tid på att tänka på vad du ska äta! Omnifood AI
+              kommer att skapa en 100 % personlig veckomålsplan bara för dig.
+              Det ser till att du får i dig alla de näringsämnen och vitaminer
+              du behöver, oavsett vilken diet du följer!
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="img/app/app-screen-1.png"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+
+          <!-- step 02 -->
+          <div class="step-img-box">
+            <img
+              src="img/app/app-screen-2.png"
+              class="step-img"
+              alt="iPhone app
+            meal approving plan screen"
+            />
+          </div>
+          <div class="step-text-box">
+            <p class="step-number">02</p>
+            <h3 class="heading-tertiary">Godkänn din veckomålsplan</h3>
+            <p class="step-description">
+              Godkänn matplanen som genererats åt dig av Omnifood AI' en gång i
+              veckan. Du kan byta ingredienser, byta hela måltider eller till
+              och med lägga till dina egna recept.
+            </p>
+          </div>
+
+          <!-- step 03 -->
+          <div class="step-text-box">
+            <p class="step-number">03</p>
+            <h3 class="heading-tertiary">
+              Ta emot måltider vid lämplig tidpunkt
+            </h3>
+            <p class="step-description">
+              Bästa kockarna i stan kommer att laga din utvalda måltid varje
+              dag, och vi kommer att leverera den till din dörr närhelst det
+              passar dig bäst. Du kan ändra leveransschema och adress dagligen!
+            </p>
+          </div>
+          <div class="step-img-box">
+            <img
+              src="img/app/app-screen-3.png"
+              class="step-img"
+              alt="iPhone app
+            delivery screen"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-meals" id="meals">
+        <div class="container center-text">
+          <span class="subheading">Måltider</span>
+          <h2 class="heading-secondary">Vår AI väljer från 5 000+ recept</h2>
+        </div>
+
+        <div class="container grid grid--3-cols margin-bottom-md">
+          <div class="meal">
+            <img
+              src="img/meals/meal-1.jpg"
+              class="meal-img"
+              alt="Japanese Gyozas"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--vegetarian">Vegetarian</span>
+              </div>
+              <p class="meal-title">Japanska Gyozas</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>550</strong> kalorier</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon
+                    class="meal-icon"
+                    name="restaurant-outline"
+                  ></ion-icon>
+                  <span>NutriScore &reg; <strong>63</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.95</strong> betyg (340)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="meal">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--vegan">Vegansk</span>
+                <span class="tag tag--paleo">Paleo</span>
+              </div>
+              <p class="meal-title">Avokadosallad</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>380</strong> kalorier</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon
+                    class="meal-icon"
+                    name="restaurant-outline"
+                  ></ion-icon>
+                  <span>NutriScore &reg; <strong>89</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.85</strong> betyg (392)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="diets">
+            <h3 class="heading-tertiary">
+              Fungerar med vilken diet som helst:
+            </h3>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Vegetarian</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Vegansk</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Pescatarian</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Glutenfri</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Laktosfri</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Keto</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Paleo</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Låg FODMAP</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Barnvänlig</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container all-recipes">
+          <a href="#" class="link">Se alla recept &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-testimonials" id="testimonials">
+        <div class="testimonials-container">
+          <span class="subheading">Rekommendationer</span>
+          <h2 class="heading-secondary">
+            När du väl provat det kan du inte gå tillbaka
+          </h2>
+
+          <div class="testimonials">
+            <figure class="testimonial" id="first-img">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer John Hanks"
+                src="img/customers/John Hanks.jpg"
+              />
+              <blockquote class="testimonial-text">
+                Billiga, hälsosamma och välsmakande måltider, utan ens måste
+                beställa manuellt! Det känns verkligen magiskt.
+              </blockquote>
+              <p class="testimonial-name">&mdash; John Hanks</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer Robert Green"
+                src="img/customers/Robert Green.jpg"
+              />
+              <blockquote class="testimonial-text">
+                AI-algoritmen är galet bra, den väljer rätt måltider för mig
+                varje gång. Det är fantastiskt att inte oroa sig för mat längre!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Robert Green</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer Michael Willis"
+                src="img/customers/Michael Willis.jpg"
+              />
+              <blockquote class="testimonial-text">
+                Masro är en livräddare! Jag har precis startat ett företag, så
+                det finns ingen tid för matlagning. Jag skulle inte kunna leva
+                utan mina dagliga måltider nu!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Michael Willis</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer Mary Stallone"
+                src="img/customers/ Mary Stallone.jpg"
+              />
+              <blockquote class="testimonial-text">
+                Jag fick Masro för hela familjen, och det frigör så mycket tid!
+                Dessutom är allt ekologiskt och veganskt och utan plast.
+              </blockquote>
+              <p class="testimonial-name">&mdash; Mary Stallone</p>
+            </figure>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-1.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-2.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-3.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-4.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-5.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-6.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-7.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-8.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-9.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-10.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-11.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-12.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-pricing" id="pricing">
+        <div class="container">
+          <span class="subheading">Prissättning</span>
+          <h2 class="heading-secondary">Äta bra utan att bryta banken</h2>
+        </div>
+
+        <div class="container grid grid--2-cols margin-bottom-md">
+          <div class="pricing-plan pricing-plan--starter">
+            <header class="plan-header">
+              <p class="plan-name">Förrätt</p>
+              <p class="plan-price"><span>kr</span>1989</p>
+              <p class="plan-text">per månad. Det är bara 66 kr per måltid!</p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>1 måltid per dag</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Beställ från 11:00 till 21:00</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Leveransen är gratis</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="close-outline"></ion-icon>
+              </li>
+            </ul>
+            <div class="plan-sing-up">
+              <a href="#" class="btn btn--full">Börja äta bra</a>
+            </div>
+          </div>
+
+          <div class="pricing-plan pricing-plan--complete">
+            <header class="plan-header">
+              <p class="plan-name">Komplett</p>
+              <p class="plan-price"><span>kr</span>2899</p>
+              <p class="plan-text">
+                per månad. Det är bara 96 kr ​​per måltid!
+              </p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span><strong>2 måltider</strong> per dag</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Beställa <strong>24/7</strong></span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Leveransen är gratis</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Få tillgång till de senaste recepten</span>
+              </li>
+            </ul>
+            <div class="plan-sing-up">
+              <a href="#" class="btn btn--full">Börja äta bra</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container grid">
+          <aside class="plan-details">
+            Priserna inkluderar alla tillämpliga skatter. Du kan avbryta när som
+            helst. Båda planerna inkluderar följande:
+          </aside>
+        </div>
+
+        <div class="container grid grid--4-cols">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
+            <p class="feature-title">Laga aldrig mat igen!</p>
+            <p class="feature-text">
+              Våra prenumerationer täcker 365 dagar per år, även inklusive
+              större högtider.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="nutrition-outline"></ion-icon>
+            <p class="feature-title">Lokalt och ekologiskt</p>
+            <p class="feature-text">
+              Våra kockar använder endast lokala, färska och ekologiska
+              produkter för att tillaga dina måltider.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
+            <p class="feature-title">Inget slöseri</p>
+            <p class="feature-text">
+              Alla våra partners använder endast återanvändbara behållare för
+              att paketera alla dina måltider.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
+            <p class="feature-title">Pausa när som helst</p>
+            <p class="feature-text">
+              Åker på semester? Pausa bara din prenumeration så återbetalar vi
+              oanvända dagar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary" id="first-meal">
+                Få din första måltid gratis!
+              </h2>
+              <p class="cta-text">
+                Hälsosamma, välsmakande och problemfria måltider väntar på dig.
+                Börja äta bra idag. Du kan avbryta eller pausa när som helst.
+              </p>
+
+              <form class="cta-form" name="sign-up" netlify>
+                <div>
+                  <label for="full-name">Fullständig namn</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Peter Cruise"
+                    name="full-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">E-postadress</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="dig@exempel.com"
+                    name="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Var hörde du från oss?</label>
+                  <select id="select-where" name="select-where" required>
+                    <option value="">Välj ett alternativ:</option>
+                    <option value="friends">Vänner och familj</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="podcast">Facebook</option>
+                    <option value="ad">Twitter</option>
+                    <option value="others">Andra</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--form">Registrera dig nu</button>
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="logo" src="img/restaurant-logo.jpeg" />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Upphovsrätt &copy; <span class="year">2023</span> av Masro, Inc.
+            Alla rättigheter förbehållna.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Kontakta oss</p>
+          <address class="contacts">
+            <p class="address">Humlegårdsgatan 20, 114 46 Stockholm, Sverige</p>
+            <p>
+              <a class="footer-link" href="tel:+46 3511 12 10">+46 3511 12 10</a
+              ><br />
+              <a class="footer-link" href="mailto:hej@Masro.se">hej@Masro.se</a>
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Konto</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Skapa konto</a></li>
+            <li><a class="footer-link" href="#">Logga in</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Företag</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Om Masro</a></li>
+            <li><a class="footer-link" href="#">För affärer</a></li>
+            <li><a class="footer-link" href="#">Matlagningspartners</a></li>
+            <li><a class="footer-link" href="#">karriärer</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resurser</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Receptkatalog</a></li>
+            <li><a class="footer-link" href="#">Hjälpcenter</a></li>
+            <li><a class="footer-link" href="#">Sekretess & villkor</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
