@@ -1,45 +1,77 @@
 "use strict";
 
-const restaurantName = "Danli";
-var order = [];
+// Mobile navigation work
+const btnNav = document.querySelector(".btn-mobile-nav");
+const header = document.querySelector(".header");
 
-window.addEventListener("DOMContentLoaded", function () {
-  updateCart();
-
-  // Add the Cancel link event
-  const lnkCancel = document.querySelector("#lnkStartOver");
-  lnkCancel.addEventListener("click", function () {
-    const areYouSure = confirm("Är du säker på att avbryta beställningen?");
-    if (areYouSure) {
-      order = [];
-      updateCart();
-    }
-  });
-
-  // Add the meals click funciton
-  const meals = document.querySelectorAll(".meal");
-  for (let meal of meals) {
-    meal.addEventListener("click", function () {
-      let title = this.dataset.title;
-      order.push(title);
-      updateCart();
-    });
-  }
+btnNav.addEventListener("click", function () {
+  header.classList.toggle("nav-open");
 });
 
-// Add the update cart function
-function updateCart() {
-  let html = "";
-  for (let meal of order) {
-    html += "<li>" + meal + "</li>";
-  }
-  const ul = document.querySelector("#cart ul");
-  ul.innerHTML = html;
+// Smooth scrolling
+const allLinks = document.querySelectorAll("a:link");
 
-  const cart = document.querySelector("#cart");
-  if (order.length == 0) {
-    cart.style.backgroundColor = "#C8C8C8";
-  } else {
-    cart.style.backgroundColor = " rgb(40, 40, 172)";
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // Scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const section = document.querySelector(href);
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close mobile naviagtion
+    if (link.classList.contains("main-nav-link"))
+      header.classList.toggle("nav-open");
+  });
+});
+
+// Sticky navigation
+const sectionHero = document.querySelector(".section-hero");
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
   }
+);
+obs.observe(sectionHero);
+
+// Fixing flexbox gap property missing in some Safari versions
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
+checkFlexGap();
