@@ -1,75 +1,45 @@
-// Mobile navigation work
-const btnNav = document.querySelector(".btn-mobile-nav");
-const header = document.querySelector(".header");
+"use strict";
 
-btnNav.addEventListener("click", function () {
-  header.classList.toggle("nav-open");
-});
+const restaurantName = "Danli";
+var order = [];
 
-// Smooth scrolling
-const allLinks = document.querySelectorAll("a:link");
+window.addEventListener("DOMContentLoaded", function () {
+  updateCart();
 
-allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const href = link.getAttribute("href");
-
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const section = document.querySelector(href);
-      section.scrollIntoView({ behavior: "smooth" });
+  // Add the Cancel link event
+  const lnkCancel = document.querySelector("#lnkStartOver");
+  lnkCancel.addEventListener("click", function () {
+    const areYouSure = confirm("Är du säker på att avbryta beställningen?");
+    if (areYouSure) {
+      order = [];
+      updateCart();
     }
-
-    // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
-      header.classList.toggle("nav-open");
   });
+
+  // Add the meals click funciton
+  const meals = document.querySelectorAll(".meal");
+  for (let meal of meals) {
+    meal.addEventListener("click", function () {
+      let title = this.dataset.title;
+      order.push(title);
+      updateCart();
+    });
+  }
 });
 
-// Sticky navigation
-const sectionHero = document.querySelector(".section-hero");
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
-    }
-
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
+// Add the update cart function
+function updateCart() {
+  let html = "";
+  for (let meal of order) {
+    html += "<li>" + meal + "</li>";
   }
-);
-obs.observe(sectionHero);
+  const ul = document.querySelector("#cart ul");
+  ul.innerHTML = html;
 
-// Fixing flexbox gap property missing in some Safari versions
-function checkFlexGap() {
-  var flex = document.createElement("div");
-  flex.style.display = "flex";
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = "1px";
-
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
-
-  document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
-  flex.parentNode.removeChild(flex);
-  console.log(isSupported);
-
-  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+  const cart = document.querySelector("#cart");
+  if (order.length == 0) {
+    cart.style.backgroundColor = "#C8C8C8";
+  } else {
+    cart.style.backgroundColor = " rgb(40, 40, 172)";
+  }
 }
-checkFlexGap();
